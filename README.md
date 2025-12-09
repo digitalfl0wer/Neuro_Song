@@ -1,6 +1,83 @@
 # NeuroSong Learning Tool
 
-A playful, accessible MVP that turns **all areas of neuroscience and reality transformation** into memorable lyrical content using AI.
+NeuroSong Learning Tool (High-Level + Dev Specs)
+
+NeuroSong is a playful, high-contrast learning experience that turns neuroscience + neuroplasticity ideas into short songs or poems people actually remember. The magic is the structure. It feels like a conversation, but it behaves like a guided learning flow: pick a topic, confirm it, set a vibe, then generate a verse paired with a simple explanation that locks the concept in.
+
+This is brain science but make it catchy, clear, and fun.
+
+**The Core Promise**
+
+-You don’t just “generate content.” You help someone learn something through:
+-short lyrical memory hooks
+-clean, approval-first pacing
+-accessible, high-contrast UI
+-a quick explanation that anchors the verse to real meaning
+
+If the verse is the spark, the explanation is the grounding.
+
+
+## ✨ Features
+
+### 🧠 Comprehensive Neuroscience Coverage
+Ask about **any** neuroscience or consciousness topic:
+- Neuroplasticity, neural mechanisms, brain structures
+- Consciousness, perception, emotions
+- Meditation, sleep, dreams, altered states
+- Neurochemistry, brain development, memory
+- Cognitive biases, habit formation, flow states
+- Brain waves, quantum consciousness, embodied cognition
+- Mirror neurons, default mode network, and more!
+
+### 🎵 Customizable Output
+- **Length**: Short (4 lines), Medium (8 lines), Long (12 lines)
+- **Vibe**: Upbeat bounce, Calm/mellow, Mystic
+- **Format**: Song (rhythmic) or Poem (artistic)
+
+### 🤖 AI-Powered Generation
+- OpenAI GPT-4o-mini integration
+- Scientifically accurate content
+- Creative, memorable lyrics
+- Context-aware responses
+- Each verse now includes a short “What this teaches” explanation tied to the approved topic
+
+### 💖 Favorites System
+- Save verses to browser localStorage
+- View all saved verses with metadata
+- Organize your learning journey
+
+### 🧭 Stage Progression
+- Track Topic Idea → Approval → Verse + Explanation with visible steps
+- Confirmation buttons advance stages only after explicit approvals
+- Status text updates via `aria-live` for screen readers
+
+### ✅ User Experience
+- Approval flow (Regenerate or Approve)
+- Feedback widget
+- Loading states and error handling
+- Full keyboard navigation and ARIA labels
+- 
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State**: React hooks (client-side only)
+- **AI**: OpenAI API (GPT-4o-mini)
+- **Storage**: Browser localStorage (favorites)
+
+
+
+
+## 📚 Documentation
+
+- [OpenAI Setup Guide](docs/OpenAI-Setup.md) - Get started with OpenAI integration
+- [Validation Rules](docs/Validation-Rules.md) - API validation documentation
+- [Error Handling](docs/API-Error-Handling.md) - Complete error scenarios guide
+- [Backend Summary](docs/Backend-Implementation-Summary.md) - Implementation details
+- [Agent Tasks](docs/Agent-Tasks.md) - Task breakdown and status
+- [PRD](docs/NeuroSong-PRD.md) - Product requirements
+
 
 ## 🚀 Quick Start
 
@@ -77,96 +154,4 @@ npm start
 └── next.config.js
 ```
 
-## ✨ Features
-
-### 🧠 Comprehensive Neuroscience Coverage
-Ask about **any** neuroscience or consciousness topic:
-- Neuroplasticity, neural mechanisms, brain structures
-- Consciousness, perception, emotions
-- Meditation, sleep, dreams, altered states
-- Neurochemistry, brain development, memory
-- Cognitive biases, habit formation, flow states
-- Brain waves, quantum consciousness, embodied cognition
-- Mirror neurons, default mode network, and more!
-
-### 🎵 Customizable Output
-- **Length**: Short (4 lines), Medium (8 lines), Long (12 lines)
-- **Vibe**: Upbeat bounce, Calm/mellow, Mystic
-- **Format**: Song (rhythmic) or Poem (artistic)
-
-### 🤖 AI-Powered Generation
-- OpenAI GPT-4o-mini integration
-- Scientifically accurate content
-- Creative, memorable lyrics
-- Context-aware responses
-- Each verse now includes a short “What this teaches” explanation tied to the approved topic
-
-### 💖 Favorites System
-- Save verses to browser localStorage
-- View all saved verses with metadata
-- Organize your learning journey
-
-### 🧭 Stage Progression
-- Track Topic Idea → Approval → Verse + Explanation with visible steps
-- Confirmation buttons advance stages only after explicit approvals
-- Status text updates via `aria-live` for screen readers
-
-### ✅ User Experience
-- Approval flow (Regenerate or Approve)
-- Feedback widget
-- Loading states and error handling
-- Full keyboard navigation and ARIA labels
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **State**: React hooks (client-side only)
-- **AI**: OpenAI API (GPT-4o-mini)
-- **Storage**: Browser localStorage (favorites)
-
-## 📊 Implementation Status
-
-### Model/Backend Agent: ✅ COMPLETE
-- ✅ Prompt validation (with comprehensive documentation)
-- ✅ LLM template (covering 25+ neuroscience topic areas)
-- ✅ API route (OpenAI integration with error handling)
-- ✅ Client coordination (data contracts and type safety)
-
-### UI Agent: ✅ COMPLETE
-- ✅ Scaffolding and layout design
-- ✅ Interactive controls (length, vibe, format)
-- ✅ Result presentation with animations
-- ✅ Approval flow and feedback widget
-- ✅ Favorites system with localStorage
-
-### Next Steps
-- Auditor agent: Review accessibility, content accuracy, tone alignment
-- Debugger agent: Test error scenarios, regeneration loop, performance
-
-## 💰 Cost Estimate
-
-Using GPT-4o-mini:
-- ~$0.00015 per verse
-- ~$0.45/month for 100 verses/day
-- ~$4.50/month for 1,000 verses/day
-
-See [docs/OpenAI-Setup.md](docs/OpenAI-Setup.md) for detailed cost information.
-
-## 📚 Documentation
-
-- [OpenAI Setup Guide](docs/OpenAI-Setup.md) - Get started with OpenAI integration
-- [Validation Rules](docs/Validation-Rules.md) - API validation documentation
-- [Error Handling](docs/API-Error-Handling.md) - Complete error scenarios guide
-- [Backend Summary](docs/Backend-Implementation-Summary.md) - Implementation details
-- [Agent Tasks](docs/Agent-Tasks.md) - Task breakdown and status
-- [PRD](docs/NeuroSong-PRD.md) - Product requirements
-
-## 🔒 Security
-
-- API key stored server-side only (`.env.local`)
-- Never exposed to client
-- `.env.local` in `.gitignore`
-- See [docs/OpenAI-Setup.md](docs/OpenAI-Setup.md) for security best practices
 
