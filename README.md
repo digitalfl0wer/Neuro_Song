@@ -1,6 +1,5 @@
 # NeuroSong Learning Tool
 
-NeuroSong Learning Tool (High-Level + Dev Specs)
 
 NeuroSong is a playful, high-contrast learning experience that turns neuroscience + neuroplasticity ideas into short songs or poems people actually remember. The magic is the structure. It feels like a conversation, but it behaves like a guided learning flow: pick a topic, confirm it, set a vibe, then generate a verse paired with a simple explanation that locks the concept in.
 
