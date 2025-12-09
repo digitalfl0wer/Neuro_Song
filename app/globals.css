@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+
+  body {
+    @apply text-white;
+    background-color: transparent;
+    font-size: clamp(21px, 1.5vw + 16px, 26px);
+    line-height: 1.8;
+    font-family: "Baloo 2", "Space Grotesk", "Inter", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Brain loading animations */
+  @keyframes brain-left {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%) translateX(-20px) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0) scale(1);
+    }
+  }
+
+  @keyframes brain-right {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%) translateX(20px) scale(0.5) scaleX(-1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0) scale(1) scaleX(-1);
+    }
+  }
+
+  @keyframes brain-bottom {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+  }
+
+  @keyframes brain-sparkles {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .animate-brain-left {
+    animation: brain-left 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-brain-right {
+    animation: brain-right 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-brain-bottom {
+    animation: brain-bottom 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-brain-sparkles {
+    animation: brain-sparkles 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-brain-left,
+    .animate-brain-right,
+    .animate-brain-bottom,
+    .animate-brain-sparkles {
+      animation: none;
+      opacity: 1;
+      transform: none !important;
+    }
+  }
+}
