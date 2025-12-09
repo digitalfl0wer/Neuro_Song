@@ -1,9 +1,9 @@
-# NeuroSong Learning Tool
+# NeuroSong Learning Tool 🧠
 
 
-NeuroSong is a playful, high-contrast learning experience that turns neuroscience + neuroplasticity ideas into short songs or poems people actually remember. The magic is the structure. It feels like a conversation, but it behaves like a guided learning flow: pick a topic, confirm it, set a vibe, then generate a verse paired with a simple explanation that locks the concept in.
+NeuroSong is a playful, high-contrast learning experience that turns neuroscience + neuroplasticity concepts into short songs or poems people actually remember. The magic is the structure. YOu pick your ingredients, then it cooks it up into a guided learning flow: pick a topic, confirm it, set a vibe, then generate a verse paired with a simple explanation that locks the concept in.
 
-This is brain science but make it catchy, clear, and fun.
+This is brain science but make it catchy, clear, and fun.🙃
 
 **The Core Promise**
 
@@ -19,7 +19,7 @@ If the verse is the spark, the explanation is the grounding.
 ## ✨ Features
 
 ### 🧠 Comprehensive Neuroscience Coverage
-Ask about **any** neuroscience or consciousness topic:
+Select from provided neuroscience or consciousness topic:
 - Neuroplasticity, neural mechanisms, brain structures
 - Consciousness, perception, emotions
 - Meditation, sleep, dreams, altered states
@@ -38,7 +38,7 @@ Ask about **any** neuroscience or consciousness topic:
 - Scientifically accurate content
 - Creative, memorable lyrics
 - Context-aware responses
-- Each verse now includes a short “What this teaches” explanation tied to the approved topic
+- Each verse includes a short “What this teaches” explanation tied to the approved topic
 
 ### 💖 Favorites System
 - Save verses to browser localStorage
