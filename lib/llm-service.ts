@@ -36,8 +36,13 @@ export async function generateVerse(
       };
     }
 
-    // Build the prompt using our template
-    const prompt = buildNeuroSongPrompt(params);
+    const userPrompt = params.approvedTopic?.trim() || params.prompt.trim();
+    const prompt = buildNeuroSongPrompt({
+      userPrompt,
+      length: params.length,
+      vibe: params.vibe,
+      format: params.format,
+    });
 
     // Call OpenAI API
     const completion = await openai.chat.completions.create({
